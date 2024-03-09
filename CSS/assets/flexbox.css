@@ -1,0 +1,40 @@
+/* flexbox adalah satu metode dimensional untuk mengatur baris dan kolom. secara dinamis flexbox membagi element. sebab itu dinamakan flexbox */
+
+h1 {
+  text-align: center;
+}
+
+#container {
+  background-color: #003049;
+  width: 90%;
+  height: 1500px;
+  margin: 0 auto;
+  border: 5px solid #003049;
+  display: flex;
+  /* kiri ke kanan default flex itu row*/
+  flex-direction: row-reverse;
+  /* kanan ke kiri*/
+  flex-direction: column;
+  /* atas ke bawah*/
+  flex-direction: column-reverse;
+  /* bawah ke atas*/
+
+  /* Membagi Rata Jarak Horizontal Dengan Justify Content */
+  justify-content: space-around;
+  /* Mengatur sebaran di sekitar item */
+  justify-content: space-evenly;
+  /* Mengatur sebaran merata dengan jarak sama */
+  justify-content: space-between;
+  /* Mengatur sebaran di antara item */
+  justify-content: flex-end;
+  /* rata kanan */
+  justify-content: flex-start;
+  /* rata kiri */
+  justify-content: center;
+  /* rata tengah */
+}
+
+#container div {
+  width: 200px;
+  height: 200px;
+}

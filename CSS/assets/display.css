@@ -1,0 +1,23 @@
+h1 {
+  background-color: aquamarine;
+  border: 2px solid black;
+  width: 500px;
+  padding: 10px;
+  margin: 5px;
+}
+span {
+  background-color: orange;
+  border: 2px solid black;
+  width: 500px; /* inline tidak bisa di modifikasi lebarnya */
+  padding: 10px;
+  margin: 5px;
+  /* inline hanya bisa di modifikasi kanan kirinya saja */
+}
+
+/* inline-block adalah nilaiyang bisa kita gunakan di dalam properti display memanipulasi lebar, pading dan margin*/
+
+h1 {
+  display: inline;
+  display: inline-block;
+  display: none; /* tidak menampilkan element */
+}

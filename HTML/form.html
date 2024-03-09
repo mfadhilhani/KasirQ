@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir</title>
+</head>
+
+<body>
+
+    <!-- Mengenal Form untuk Isian Formulir -->
+    <!-- actoin adalah kemana data akan dikirim dan method ada get atau post tapi jika tidak di definisikan defaultnya get-->
+
+    <h1>Formulir isian</h1>
+    <form action="#" method="post">
+        <!-- Inputan di dalam Form -->
+        <input type="text">
+        <input type="email">
+        <input type="password">
+        <input type="number">
+        <input type="color">
+        <input type="button">
+        <input type="checkbox">
+        <input type="date">
+        <input type="datetime-local">
+        <input type="file">
+        <input type="hidden">
+        <input type="image">
+        <input type="month">
+        <input type="radio">
+        <input type="range">
+        <input type="reset">
+        <input type="search">
+        <input type="submit">
+        <input type="tel">
+        <input type="time">
+        <input type="url">
+        <input type="week">
+        <!-- Obsolete values -->
+        <input type="datetime">
+    </form>
+    <hr>
+    <br><br><br>
+
+    <!-- Fungsi Label untuk Judul Inputan -->
+    <table border="1">
+        <form action="#" method="post">
+            <tr>
+                <th><label for="name">Nama Lengkap</label></th>
+                <td>:</td>
+                <td><input type="text" placeholder="Nama" id="name"></td>
+            </tr>
+            <tr>
+                <th> <label for="email">Email</label></th>
+                <td>:</td>
+                <td><input type="email" placeholder="Email" id="email"></td>
+            </tr>
+            <tr>
+                <th><label for="password">Password</label></th>
+                <td>:</td>
+                <td>
+                    <input type="password" placeholder="Password" id="password"></td>
+            </tr>
+            <tr>
+                <th> <label for="nomor">HP</label></th>
+                <td>:</td>
+                <td>
+                    <input type="number" placeholder="Nomor" id="nomor"></td>
+            </tr>
+            <tr>
+                <th><label for="warna">Color</label></th>
+                <td>:</td>
+                <td>
+                    <input type="color" id="warna"></td>
+            </tr>
+        </form>
+    </table>
+    <hr>
+    <br><br>
+
+    <!-- Fungsi Button di dalam Form -->
+    <table border="1">
+        <form action="/daftar" method="post">
+            <tr>
+                <th><label for="name">Nama Lengkap</label></th>
+                <td>:</td>
+                <td><input type="text" placeholder="Nama" id="name"></td>
+            </tr>
+            <tr>
+                <th> <label for="email">Email</label></th>
+                <td>:</td>
+                <td><input type="email" placeholder="Email" id="email"></td>
+            </tr>
+            <tr>
+                <th><label for="password">Password</label></th>
+                <td>:</td>
+                <td>
+                    <input type="password" placeholder="Password" id="password"></td>
+            </tr>
+            <tr>
+                <th> <label for="nomor">HP</label></th>
+                <td>:</td>
+                <td>
+                    <input type="number" placeholder="Nomor" id="nomor"></td>
+            </tr>
+            <tr>
+                <th><label for="warna">Color</label></th>
+                <td>:</td>
+                <td>
+                    <input type="color" id="warna"></td>
+            </tr>
+
+            <tr>
+                <th colspan="3">
+                    <!-- tujuan berdasarkan action yang kita berikan  -->
+                    <button>Kirim</button>
+                    <button type="submit">Kirim</button>
+                    <!-- value disini untuk menapilakan is atau tulisan pada input -->
+                    <input type="submit" value="Daftar">
+
+                    <!-- tidak bisa mengirim data hanya tombol biasa -->
+                    <input type="button" value="Daftar">
+                    <button type="button">Tombol biasa</button>
+                </th>
+            </tr>
+        </form>
+    </table>
+    <hr><br><br>
+
+
+    <!-- Mengenal Attribute Name di Input HTML -->
+    <table border="1">
+        <form action="/daftar" method="get">
+            <!-- ada 2 method yaitu post dan get post untuk mengirimkan data lebih aman yang data tidak boleh di lihat oleh user karena data tidak akan muncul di URL. baik untuk back end sedangkan get ini bisa di manfaat kan untuk mencari data dan data akan muncul di URL -->
+            <tr>
+                <th><label for="name">Nama Lengkap</label></th>
+                <td>:</td>
+                <td><input type="text" placeholder="Nama" id="name" name="name"></td>
+            </tr>
+            <tr>
+                <th> <label for="email">Email</label></th>
+                <td>:</td>
+                <td><input type="email" placeholder="Email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <th><label for="password">Password</label></th>
+                <td>:</td>
+                <td>
+                    <input type="password" placeholder="Password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <th> <label for="nomor">HP</label></th>
+                <td>:</td>
+                <td>
+                    <input type="number" placeholder="Nomor" id="nomor" name="nomor"></td>
+            </tr>
+
+            <tr>
+                <th colspan="3">
+                    <!-- tujuan berdasarkan action yang kita berikan  -->
+
+                    <button type="submit">Kirim</button>
+
+                </th>
+            </tr>
+        </form>
+    </table>
+    <hr><br><br>
+
+    <!-- Mengenal Radio Button Checkbox dan Select untuk Pilihan Ganda -->
+
+    <!-- Jika ingin Checkbox memilih salah satu kasi sama isi atribut nama -->
+
+    <!-- checked dan selected berfungsi sebagai pilihan default -->
+    <h1> Pesanan</h1>
+    <form action="/orders">
+
+        <label for="">baju</label>
+
+        <div>
+            <input type="radio" name="baju" id="" value="Kaos" checked> <label for="">Kaos</label>
+
+            <input type="radio" name="baju" id="" value="Kemeja"> <label for="">Kemeja</label>
+        </div>
+        <div>
+            <label for="">Ukuran</label>
+            <select name="ukuran" id="ukuran">
+                <option>-</option>
+                <option value="s">s</option>
+                <option value="m">m</option>
+                <option value="l" selected>l</option>
+                <option value="xl">xl</option>
+            </select>
+        </div>
+        <div>
+            <!-- term gampangnya adalah saya setuju -->
+            <label for="term">Saya Setuju</label>
+            <input type="checkbox" name="term" id="term" value="Setuju">
+        </div>
+
+        <!-- Mengenal Input Text Area -->
+        <div>
+            <p>
+                <label for="notes">Catatan</label>
+            </p>
+            <textarea name="notes" id="notes" cols="20" rows="5"></textarea>
+        </div>
+        <button type="submit">Order</button>
+
+    </form>
+
+    <hr><br><br>
+
+    <h1>Validasi</h1>
+    <!-- required berfungsi agar inputan wajib di isi -->
+    <!-- minlength dan min adalah minimal input yang kita berikan -->
+    <!-- maxlength dan max adalah maximal input yang kita berikan -->
+    <form action="valid">
+        <input type="text" name="input" required minlength="3" maxlength="5">
+        <input type="number" name="number" required min="3" max="5">
+        <button type="submit">Kirim</button>
+    </form>
+
+
+</body>
+
+</html>
