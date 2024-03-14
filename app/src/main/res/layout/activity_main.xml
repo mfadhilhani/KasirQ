@@ -17,6 +17,21 @@
 
     </FrameLayout>
 
+    <Button
+        android:id="@+id/btn_pesan"
+        android:layout_width="189dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_btn_blue_primary"
+        android:fontFamily="@font/mmedium"
+        android:text="@string/btn_pesan"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/navMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navMenu"
         android:layout_width="match_parent"
