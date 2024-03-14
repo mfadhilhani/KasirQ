@@ -1,7 +1,10 @@
 package Kwlompok4.com.kasirq;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     ActivityMainBinding binding;
+    Button btn_pesan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
                 return true;
+            }
+        });
+
+        btn_pesan = findViewById(R.id.btn_pesan);
+        btn_pesan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gochekout = new Intent(MainActivity.this, Checkout.class);
+                startActivity(gochekout);
             }
         });
 

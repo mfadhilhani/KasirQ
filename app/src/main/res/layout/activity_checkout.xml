@@ -5,6 +5,7 @@
     android:id="@+id/checkout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgprimary"
     tools:context=".Checkout">
 
 
@@ -17,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/mextrabold"
-            android:text="Menu"
+            android:text="Rincian"
             android:textColor="@color/blueprimry"
             android:textSize="48sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +116,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -193,7 +194,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -270,7 +271,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -347,7 +348,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -424,7 +425,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -501,7 +502,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -578,7 +579,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -655,7 +656,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -732,7 +733,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -809,7 +810,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -886,7 +887,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -963,7 +964,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1040,7 +1041,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="5dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1091,7 +1092,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_marginLeft="24dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="80dp"
                     android:layout_marginRight="24dp"
                     android:background="@drawable/bg_btn_blue_primary"
                     android:fontFamily="@font/mmedium"
