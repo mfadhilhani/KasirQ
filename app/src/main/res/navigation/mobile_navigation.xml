@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation">
+
+    <fragment
+    android:id="@+id/dashboard"
+    android:name="Kwlompok4.com.kasirq.Dashboard"
+    android:label="Dashboard"
+    tools:layout="@layout/fragment_dashboard"/>
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="Kwlompok4.com.kasirq.Profile"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_profile"/>
+
+    <fragment
+        android:id="@+id/tambahMenu"
+        android:name="Kwlompok4.com.kasirq.TambahMenu"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_tambah_menu"/>
+
+</navigation>

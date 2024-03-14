@@ -10,6 +10,7 @@ import android.widget.Button;
 
 public class GetStartedAct extends AppCompatActivity {
 
+
     Button btn_login,btn_new_account_create;
 
     @Override

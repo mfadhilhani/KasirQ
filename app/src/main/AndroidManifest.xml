@@ -6,12 +6,18 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logokasirq"
+        android:icon="@drawable/logokasirqlt"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logokasirq"
         android:supportsRtl="true"
         android:theme="@style/Theme.KasirQ"
         tools:targetApi="31">
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".Dashboard"
             android:exported="false" />
