@@ -777,7 +777,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp">
 
 
                     <LinearLayout
@@ -810,7 +811,7 @@
                         android:layout_width="37dp"
                         android:layout_height="37dp"
                         android:src="@drawable/add"
-                        android:layout_marginLeft="15dp"/>
+                        android:layout_marginLeft="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -849,256 +850,67 @@
 
 
                 </LinearLayout>
+
+
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#EDEDED" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    android:orientation="horizontal">
 
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/mmedium"
+                        android:text="Total Harga"
+                        android:textColor="@color/blackprimry"
+                        android:textSize="18sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mmedium"
-                            android:text="Nasi Goreng"
+                            android:text="Rp. "
+                            android:layout_marginLeft="60dp"
                             android:textColor="@color/blackprimry"
-                            android:textSize="12sp" />
-
+                            android:textSize="18sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mmedium"
-                            android:text="Spesial"
-                            android:textColor="@color/grayprimry"
-                            android:textSize="12sp"
-                            />
-
+                            android:text="150.0000"
+                            android:textColor="@color/blackprimry"
+                            android:textSize="18sp" />
 
                     </LinearLayout>
 
 
-                    <ImageView
-                        android:layout_width="37dp"
-                        android:layout_height="37dp"
-                        android:src="@drawable/add"
-                        android:layout_marginLeft="15dp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+
+
+                    <Button
+                        android:id="@+id/btn_pesanSekarang"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/bg_btn_blue_primary"
                         android:fontFamily="@font/mmedium"
-                        android:text="1"
-                        android:textColor="@color/blackprimry"
-                        android:textSize="20sp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
-                        />
-
-                    <ImageView
-                        android:layout_width="37dp"
-                        android:layout_height="37dp"
-                        android:src="@drawable/min"
-                        android:layout_marginLeft="15dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mmedium"
-                        android:text="Rp."
-                        android:textColor="@color/blackprimry"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mmedium"
-                        android:text="15.000"
-                        android:textColor="@color/blackprimry"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"/>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/mmedium"
-                            android:text="Nasi Goreng"
-                            android:textColor="@color/blackprimry"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/mmedium"
-                            android:text="Spesial"
-                            android:textColor="@color/grayprimry"
-                            android:textSize="12sp"
-                            />
-
-
-                    </LinearLayout>
-
-
-                    <ImageView
-                        android:layout_width="37dp"
-                        android:layout_height="37dp"
-                        android:src="@drawable/add"
-                        android:layout_marginLeft="15dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mmedium"
-                        android:text="1"
-                        android:textColor="@color/blackprimry"
-                        android:textSize="20sp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
-                        />
-
-                    <ImageView
-                        android:layout_width="37dp"
-                        android:layout_height="37dp"
-                        android:src="@drawable/min"
-                        android:layout_marginLeft="15dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mmedium"
-                        android:text="Rp."
-                        android:textColor="@color/blackprimry"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mmedium"
-                        android:text="15.000"
-                        android:textColor="@color/blackprimry"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"/>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/mmedium"
-                            android:text="Nasi Goreng"
-                            android:textColor="@color/blackprimry"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/mmedium"
-                            android:text="Spesial"
-                            android:textColor="@color/grayprimry"
-                            android:textSize="12sp"
-                            />
-
-
-                    </LinearLayout>
-
-
-                    <ImageView
-                        android:layout_width="37dp"
-                        android:layout_height="37dp"
-                        android:src="@drawable/add"
-                        android:layout_marginLeft="15dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mmedium"
-                        android:text="1"
-                        android:textColor="@color/blackprimry"
-                        android:textSize="20sp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
-                        />
-
-                    <ImageView
-                        android:layout_width="37dp"
-                        android:layout_height="37dp"
-                        android:src="@drawable/min"
-                        android:layout_marginLeft="15dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mmedium"
-                        android:text="Rp."
-                        android:textColor="@color/blackprimry"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mmedium"
-                        android:text="15.000"
-                        android:textColor="@color/blackprimry"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"/>
-
-
-                </LinearLayout>
-
-
-
-
-
-
-
-                <Button
-                    android:id="@+id/btn_pesanSekarang"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="80dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@drawable/bg_btn_blue_primary"
-                    android:fontFamily="@font/mmedium"
-                    android:text="@string/btn_pesan"
-                    android:textColor="#FFF"
-                    android:textSize="20sp" />
+                        android:text="Pesan Sekarang"
+                        android:textColor="#FFF"
+                        android:textSize="20sp" />
             </LinearLayout>
 
 
