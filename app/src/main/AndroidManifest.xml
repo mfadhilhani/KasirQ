@@ -28,7 +28,7 @@
             android:name=".Dashboard"
             android:exported="false" />
         <activity
-            android:name=".profil"
+            android:name=".Profile"
             android:exported="false" />
         <activity
             android:name=".SuccessRegisterAct"

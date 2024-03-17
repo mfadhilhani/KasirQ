@@ -1,15 +1,18 @@
 package Kwlompok4.com.kasirq;
 
 import android.app.ActivityManager;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,7 +21,7 @@ import android.view.Window;
  */
 public class Dashboard extends Fragment {
 
-    
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -69,8 +72,37 @@ public class Dashboard extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+
+
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+
+        Button btn_pesan = view.findViewById(R.id.btn_pesan);
+        btn_pesan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Code for OpenPageFromFragment
+                Intent x = new Intent(getActivity(), Checkout.class);
+                startActivity(x);
+                //End Code for OpenPageFromFragment
+
+                //Code for OpenFragmentFromFragment
+//                getActivity().getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.frame_layout, new FprofileFragment())
+//                        .addToBackStack(null)
+//                        .commit();
+                //End Code for OpenFragmentFromFragment
+            }
+        });
+        return view;
+
+
 
     }
+
+
+
+
 }
 

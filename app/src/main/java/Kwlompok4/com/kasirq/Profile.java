@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,15 +31,13 @@ public class Profile extends Fragment {
         // Required empty public constructor
     }
 
-//    Button btn_logout;
-
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Profil.
+     * @return A new instance of fragment Profile.
      */
     // TODO: Rename and change types and number of parameters
     public static Profile newInstance(String param1, String param2) {
@@ -57,26 +56,53 @@ public class Profile extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-//        btn_logout = btn_logout (R.id.profile);
-
-//        btn_logout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent gologin = new Intent(Profile.this, Login.class);
-//                startActivity(gologin);
-//            }
-//        });
-    }
-
-    private Button btn_logout(int profile) {
-        return null;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+
+        LinearLayout btn_edit = view.findViewById(R.id.btn_edit);
+        btn_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Code for OpenPageFromFragment
+                Intent btn_edit = new Intent(getActivity(), EditProfile.class);
+                startActivity(btn_edit);
+                //End Code for OpenPageFromFragment
+
+                //Code for OpenFragmentFromFragment
+//                getActivity().getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.frame_layout, new FprofileFragment())
+//                        .addToBackStack(null)
+//                        .commit();
+                //End Code for OpenFragmentFromFragment
+            }
+        });
+
+
+        Button btn_logout = view.findViewById(R.id.btn_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Code for OpenPageFromFragment
+                Intent btn_logout = new Intent(getActivity(), Login.class);
+                startActivity(btn_logout);
+                //End Code for OpenPageFromFragment
+
+                //Code for OpenFragmentFromFragment
+//                getActivity().getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.frame_layout, new FprofileFragment())
+//                        .addToBackStack(null)
+//                        .commit();
+                //End Code for OpenFragmentFromFragment
+            }
+        });
+        return view;
+
+
     }
 }

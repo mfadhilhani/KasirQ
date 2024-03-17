@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     ActivityMainBinding binding;
-    Button btn_pesan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,14 +53,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_pesan = findViewById(R.id.btn_pesan);
-        btn_pesan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent gochekout = new Intent(MainActivity.this, Checkout.class);
-                startActivity(gochekout);
-            }
-        });
+
 
     }
 

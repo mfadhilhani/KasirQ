@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -21,6 +22,8 @@ public class Struk extends AppCompatActivity {
 
     Button btn_kembali;
 
+     LinearLayout btn_back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,16 @@ public class Struk extends AppCompatActivity {
         timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
 
         updateTime();
+
+        btn_back = findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goDashbord = new Intent(Struk.this, Checkout.class);
+                startActivity(goDashbord);
+            }
+        });
 
         btn_kembali = findViewById(R.id.btn_kembali);
 

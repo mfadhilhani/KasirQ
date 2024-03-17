@@ -79,7 +79,7 @@
                 android:textColor="@color/grayprimry"
                 android:textSize="20sp" />
 
-            <TextView
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
@@ -101,7 +101,7 @@
             android:layout_marginRight="24dp"
             android:orientation="vertical">
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
