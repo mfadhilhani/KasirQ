@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,14 +8,11 @@
     tools:context=".Dashboard">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/bgprimary"
         tools:context=".Dashboard">
-
 
 
         <TextView
@@ -92,8 +90,11 @@
                         android:orientation="vertical">
 
                         <ImageView
+                            android:id="@+id/ayam"
                             android:layout_width="62dp"
                             android:layout_height="62dp"
+                            android:clickable="true"
+                            android:focusable="true"
                             android:src="@drawable/ayam" />
 
                         <TextView
@@ -114,6 +115,7 @@
                         android:orientation="vertical">
 
                         <ImageView
+                            android:id="@+id/mie"
                             android:layout_width="62dp"
                             android:layout_height="62dp"
                             android:src="@drawable/mie" />
@@ -151,6 +153,8 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
+
 
 
                 <TextView
@@ -201,7 +205,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="Ayam"
+                            android:text="Kopi"
                             android:textColor="@color/blackprimry"
                             android:textSize="14sp" />
 
@@ -223,7 +227,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="Mie"
+                            android:text="Soda"
                             android:textColor="@color/blackprimry"
                             android:textSize="14sp" />
 
@@ -245,7 +249,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="Bakso"
+                            android:text="Teh"
                             android:textColor="@color/blackprimry"
                             android:textSize="14sp" />
 
@@ -260,8 +264,7 @@
                     android:id="@+id/btn_pesan"
                     android:layout_width="189dp"
                     android:layout_height="43dp"
-                    android:layout_marginLeft="65dp"
-                    android:layout_marginRight="50dp"
+                   android:layout_gravity="center"
                     android:background="@drawable/bg_btn_blue_primary"
                     android:fontFamily="@font/mmedium"
                     android:text="@string/btn_pesan"

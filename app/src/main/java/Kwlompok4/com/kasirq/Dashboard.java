@@ -14,6 +14,9 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 
+import android.widget.ImageView;
+import android.view.View.OnClickListener;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link Dashboard#newInstance} factory method to
@@ -85,6 +88,8 @@ public class Dashboard extends Fragment {
                 //Code for OpenPageFromFragment
                 Intent x = new Intent(getActivity(), Checkout.class);
                 startActivity(x);
+                MyDialogFragment dialogFragment = new MyDialogFragment();
+                dialogFragment.show(getChildFragmentManager(), "MyDialogFragment");
                 //End Code for OpenPageFromFragment
 
                 //Code for OpenFragmentFromFragment
@@ -95,6 +100,16 @@ public class Dashboard extends Fragment {
                 //End Code for OpenFragmentFromFragment
             }
         });
+        // Add click listener for ImageView
+        ImageView ayamImageView = view.findViewById(R.id.ayam);
+        ayamImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyDialogFragment dialogFragment = new MyDialogFragment();
+                dialogFragment.show(getChildFragmentManager(), "MyDialogFragment");
+            }
+        });
+
         return view;
 
 

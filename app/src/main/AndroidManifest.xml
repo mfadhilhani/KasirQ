@@ -13,6 +13,9 @@
         android:theme="@style/Theme.KasirQ"
         tools:targetApi="31">
         <activity
+            android:name=".list_menu"
+            android:exported="false" />
+        <activity
             android:name=".Struk"
             android:exported="false" />
         <activity

@@ -32,8 +32,8 @@ public class EditProfile extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goDashbord = new Intent(EditProfile.this, Profile.class);
-                startActivity(goDashbord);
+                Intent goprofil = new Intent(EditProfile.this, Profile.class);
+                startActivity(goprofil);
             }
         });
     }
