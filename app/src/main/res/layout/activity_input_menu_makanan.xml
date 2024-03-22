@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".input_menu_makanan">
+
+
+    <!-- Input field for Menu Name -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mextrabold"
+        android:text="TAMBAH MENU MAKANAN"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/blueprimry"
+        android:textSize="21dp" />
+
+    <ImageView
+        android:layout_margin="80dp"
+        android:id="@+id/imageViewMenuAvatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_nopic" />
+
+    <TextView
+        android:id="@+id/textViewMenuName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_below="@id/imageViewMenuAvatar"
+        android:fontFamily="@font/mmedium"
+        android:text="Nama Menu"
+        android:textColor="@android:color/black" />
+
+    <!-- EditText for Menu Name -->
+    <EditText
+        android:id="@+id/editTextMenuName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewMenuName"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/mmedium"
+        android:background="@drawable/edittext_background"
+        android:hint="Ayam"
+        android:padding="12dp"
+        android:textColor="@android:color/black" />
+
+
+    <!-- Input field for Menu Price -->
+    <TextView
+        android:id="@+id/textViewMenuPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Modal"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/mmedium"
+        android:layout_below="@id/editTextMenuName"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextMenuPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextMenuName"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/mmedium"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="30dp"
+        android:hint="15000"
+        android:background="@drawable/edittext_background"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="@android:color/black" />
+
+    <!-- Input field for Menu Cost -->
+    <TextView
+        android:id="@+id/textViewMenuCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Harga Jual"
+        android:fontFamily="@font/mmedium"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/editTextMenuPrice"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextMenuCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextMenuPrice"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/mmedium"
+        android:layout_marginEnd="30dp"
+        android:hint="20000"
+        android:background="@drawable/edittext_background"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="@android:color/black" />
+
+    <!-- Input field for Menu Variant -->
+    <TextView
+        android:id="@+id/textViewMenuVariant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Varian"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/mmedium"
+        android:layout_below="@id/editTextMenuCost"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextMenuVariant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextMenuCost"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/mmedium"
+        android:layout_marginEnd="50dp"
+        android:layout_toStartOf="@id/imageButtonAddVariant"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:hint="Goreng"
+        android:textColor="@android:color/black" />
+
+    <!-- Image button for adding variant -->
+    <ImageButton
+        android:id="@+id/imageButtonAddVariant"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        android:layout_below="@id/editTextMenuCost"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="35dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/addnotes" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAddVariantq"
+        android:layout_width="48dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/editTextMenuVariant"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="55dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/playlistaddcircle" />
+</RelativeLayout>

@@ -1,5 +1,6 @@
 package Kwlompok4.com.kasirq;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +63,27 @@ public class TambahMenu extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tambah_menu, container, false);
+        View view = inflater.inflate(R.layout.fragment_tambah_menu, container, false);
+
+
+        ImageView btn_edit = view.findViewById(R.id.imageViewFood);
+        btn_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Code for OpenPageFromFragment
+                Intent imageViewFood = new Intent(getActivity(), List_Menu_Makanan.class);
+                startActivity(imageViewFood);
+                //End Code for OpenPageFromFragment
+
+                //Code for OpenFragmentFromFragment
+//                getActivity().getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.frame_layout, new FprofileFragment())
+//                        .addToBackStack(null)
+//                        .commit();
+                //End Code for OpenFragmentFromFragment
+            }
+        });
+        return view;
+
     }
 }

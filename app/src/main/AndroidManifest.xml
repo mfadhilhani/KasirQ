@@ -13,6 +13,18 @@
         android:theme="@style/Theme.KasirQ"
         tools:targetApi="31">
         <activity
+            android:name=".input_menu_minuman"
+            android:exported="false" />
+        <activity
+            android:name=".List_Menu_Minuman"
+            android:exported="false" />
+        <activity
+            android:name=".List_Menu_Makanan"
+            android:exported="false" />
+        <activity
+            android:name=".input_menu_makanan"
+            android:exported="false" />
+        <activity
             android:name=".list_menu"
             android:exported="false" />
         <activity
