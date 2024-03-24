@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".List_Menu_Makanan">
 
-    <!-- Menu items -->
+    
     <LinearLayout
         android:id="@+id/menuListLayout"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:padding="16dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- TextView "TAMBAH MENU" -->
+
         <TextView
             android:id="@+id/textViewAddMenu"
             android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
             android:fontFamily="@font/mextrabold"
             android:textColor="@color/blueprimry" />
 
-        <!-- Menu item 1 -->
+
         <LinearLayout
             android:id="@+id/menuItem1Layout"
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
 
-        <!-- Menu item 2 -->
+
         <LinearLayout
             android:id="@+id/menuItem2Layout"
             android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
 
-        <!-- Menu item 3 -->
+
         <LinearLayout
             android:id="@+id/menuItem3Layout"
             android:layout_width="match_parent"
@@ -153,7 +153,7 @@
 
     </LinearLayout>
 
-    <!-- Guideline for spacing -->
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
