@@ -31,8 +31,8 @@ public class List_Menu_Makanan extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent editayam = new Intent(List_Menu_Makanan.this, input_menu_makanan.class);
-                startActivity(editayam);
+                Intent add = new Intent(List_Menu_Makanan.this, input_menu_makanan.class);
+                startActivity(add);
             }
         });
 

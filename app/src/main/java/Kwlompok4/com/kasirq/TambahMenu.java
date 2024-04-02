@@ -73,6 +73,24 @@ public class TambahMenu extends Fragment {
                 //Code for OpenPageFromFragment
                 Intent imageViewFood = new Intent(getActivity(), List_Menu_Makanan.class);
                 startActivity(imageViewFood);
+               //End Code for OpenPageFromFragment
+
+                //Code for OpenFragmentFromFragment
+//                getActivity().getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.frame_layout, new FprofileFragment())
+//                        .addToBackStack(null)
+//                        .commit();
+                //End Code for OpenFragmentFromFragment
+            }
+        });
+
+        ImageView btn_edit1 = view.findViewById(R.id.imageViewDrink);
+        btn_edit1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Code for OpenPageFromFragment
+                Intent imageViewFood = new Intent(getActivity(), List_Menu_Minuman.class);
+                startActivity(imageViewFood);
                 //End Code for OpenPageFromFragment
 
                 //Code for OpenFragmentFromFragment

@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="60dp"
-            android:text="TAMBAH MENU"
+            android:text="TAMBAH MENU MAKANAN"
             android:layout_marginBottom="100dp"
             android:textSize="25dp"
             android:fontFamily="@font/mextrabold"
