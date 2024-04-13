@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "819808438070",
+    "project_id": "kasirq-84b7c",
+    "storage_bucket": "kasirq-84b7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819808438070:android:cffaca0a00e1632a4c5597",
+        "android_client_info": {
+          "package_name": "Kwlompok4.com.kasirq"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADmdj8L3qw2XMTBDz8zwh5ouzOwvnCRWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

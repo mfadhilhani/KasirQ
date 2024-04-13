@@ -1,0 +1,69 @@
+{
+  "Dasboard": {
+    "Makanan": {
+      "Ayam": {
+        "Varian": {
+          "Goreng": 15000,
+          "Rica-Rica": 18000,
+          "Geprek": 18000,
+          "Balado": 16000,
+          "Kecap": 17000
+        }
+      },
+      "Mie": {
+        "Varian": {
+          "Goreng": 15000,
+          "Rica-Rica": 18000,
+          "Geprek": 18000,
+          "Balado": 16000,
+          "Kecap": 17000
+        }
+      },
+      "Bakso": {
+        "Varian": {
+          "Goreng": 15000,
+          "Rica-Rica": 18000,
+          "Geprek": 18000,
+          "Balado": 16000,
+          "Kecap": 17000
+        }
+      }
+    },
+    "Minuman": {
+      "Kopi": {
+        "Varian": {
+          "Goreng": 15000,
+          "Rica-Rica": 18000,
+          "Geprek": 18000,
+          "Balado": 16000,
+          "Kecap": 17000
+        }
+      },
+      "Soda": {
+        "Varian": {
+          "Goreng": 15000,
+          "Rica-Rica": 18000,
+          "Geprek": 18000,
+          "Balado": 16000,
+          "Kecap": 17000
+        }
+      },
+      "Teh": {
+        "Varian": {
+          "Goreng": 15000,
+          "Rica-Rica": 18000,
+          "Geprek": 18000,
+          "Balado": 16000,
+          "Kecap": 17000
+        }
+      }
+    }
+  },
+
+  "Users": {
+    "Fadhil": {
+      "username": "fadhil",
+      "password": "Fadhilkasirq1"
+    }
+  }
+}
