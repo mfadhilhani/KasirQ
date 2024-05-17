@@ -27,7 +27,7 @@
         android:id="@+id/imageViewMenuAvatar"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:scaleType="fitCenter"
         android:src="@drawable/icon_nopic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,14 +48,13 @@
         <ImageView
             android:id="@+id/pic_foto"
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ayam" />
+            android:layout_height="80dp" />
 
     </io.github.florent37.shapeofview.shapes.CircleView>
 
 
     <ImageView
-        android:id="@+id/btn_add"
+        android:id="@+id/btn_add_foto"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="90dp"
@@ -79,13 +78,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewMenuAvatar" />
 
+
     <EditText
         android:id="@+id/editTextMenuName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/edittext_background"
         android:fontFamily="@font/mmedium"
         android:hint="Ayam"
@@ -93,10 +93,9 @@
         android:padding="12dp"
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewMenuName" />
-
-
 
     <TextView
         android:id="@+id/textViewMenuPrice"
@@ -185,6 +184,7 @@
         android:background="@drawable/edittext_background"
         android:fontFamily="@font/mmedium"
         android:hint="Goreng"
+        android:inputType="text"
         android:padding="12dp"
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonAddVariant"

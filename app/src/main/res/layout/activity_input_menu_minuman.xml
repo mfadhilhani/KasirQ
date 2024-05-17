@@ -28,7 +28,7 @@
         android:id="@+id/imageViewMenuAvatar"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:scaleType="fitCenter"
         android:src="@drawable/icon_nopic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,15 +49,14 @@
         <ImageView
             android:id="@+id/pic_foto"
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/kopi" />
+            android:layout_height="80dp"/>
 
     </io.github.florent37.shapeofview.shapes.CircleView>
 
 
 
     <ImageView
-        android:id="@+id/btn_add"
+        android:id="@+id/btn_add_foto"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="90dp"

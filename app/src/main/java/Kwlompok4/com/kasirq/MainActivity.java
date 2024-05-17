@@ -34,6 +34,18 @@ public class MainActivity extends AppCompatActivity {
         replaceFragment(new Dashboard());
 
 
+        // Cek apakah ada flag yang dikirimkan dari EditProfile
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("target_fragment")) {
+            String targetFragment = intent.getStringExtra("target_fragment");
+            // Navigasi ke Profile jika flag dikirimkan dari EditProfile
+            if (targetFragment.equals("profile")) {
+                replaceFragment(new Profile());
+            }
+        }
+
+
+
         binding.navMenu.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

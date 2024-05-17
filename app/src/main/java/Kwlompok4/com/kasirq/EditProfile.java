@@ -32,7 +32,9 @@ public class EditProfile extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goprofil = new Intent(EditProfile.this, Profile.class);
+                Intent goprofil = new Intent(EditProfile.this, MainActivity.class);
+                // Mengirimkan flag bahwa navigasi kembali dari EditProfile ke Profile
+                goprofil.putExtra("target_fragment", "profile");
                 startActivity(goprofil);
             }
         });

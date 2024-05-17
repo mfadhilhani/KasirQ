@@ -65,5 +65,15 @@
       "username": "fadhil",
       "password": "Fadhilkasirq1"
     }
+  },
+
+  "Tambah_Menu_Makanan": {
+    "Nama_Menu": "Ayam",
+    "Modal": 15000,
+    "Harga_Jual": 20000,
+    "Varian_Varian": {
+      "Varian": "Goreng"
+    },
+    "url_photo": "..."
   }
 }

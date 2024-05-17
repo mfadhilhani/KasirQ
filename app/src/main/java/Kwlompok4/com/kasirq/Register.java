@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,10 +23,10 @@ public class Register extends AppCompatActivity {
     LinearLayout btn_back;
     Button btn_continue;
     EditText password,username;
-    DatabaseReference reference;
+    DatabaseReference database;
 
-    String USERNAME_KEY = "usernamekey";
-    String username_key = "";
+//    String USERNAME_KEY = "usernamekey";
+//    String username_key = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +36,15 @@ public class Register extends AppCompatActivity {
 
         password = findViewById(R.id.password);
         username = findViewById(R.id.username);
-
-
         btn_back = findViewById(R.id.btn_back);
+        btn_continue = findViewById(R.id.btn_continue);
 
+        //menyimpan data ke database
+        database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://kasirq-fc9f9-default-rtdb.firebaseio.com/");
+
+
+
+        // tombol kembali
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,38 +53,36 @@ public class Register extends AppCompatActivity {
             }
         });
 
-        btn_continue = findViewById(R.id.btn_continue);
 
+        // tombol continue
         btn_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //menyimpan data di hp
-                SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(username_key, username.getText().toString());
-                editor.apply();
+                // Mengambil nilai dari EditText
+                String usernameText = username.getText().toString();
+                String passwordText = password.getText().toString();
 
-                //menyimpan data ke database
-                reference = FirebaseDatabase.getInstance().getReference().child("Users").child(username.getText().toString());
-                reference.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        snapshot.getRef().child("username").setValue(username.getText().toString());
-                        snapshot.getRef().child("password").setValue(password.getText().toString());
-                    }
+                if (usernameText.isEmpty() || passwordText.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Ada Data Yang Masih Kosong!!", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Mendapatkan referensi ke "Users" di Firebase Database
+                    database = FirebaseDatabase.getInstance().getReference("Users");
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+                    // Menyimpan data pengguna baru ke Firebase Database
+                    database.child(usernameText).child("username").setValue(usernameText);
+                    database.child(usernameText).child("password").setValue(passwordText);
 
-                    }
-                });
+                    Toast.makeText(getApplicationContext(), "Register Berhasil", Toast.LENGTH_SHORT).show();
 
-                //pindah halaman
-                Intent gocontinue = new Intent(Register.this, SuccessRegisterAct.class);
-                startActivity(gocontinue);
+                    // Pindah halaman
+                    Intent gocontinue = new Intent(Register.this, SuccessRegisterAct.class);
+                    startActivity(gocontinue);
+                }
             }
         });
+
+
     }
 
 
