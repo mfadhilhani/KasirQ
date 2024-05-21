@@ -13,40 +13,43 @@
         android:theme="@style/Theme.KasirQ"
         tools:targetApi="31">
         <activity
+            android:name=".Tambah_menu.EditDataMenu"
+            android:exported="false" />
+        <activity
             android:name=".listCheckout"
             android:exported="false" />
         <activity
-            android:name=".input_menu_minuman"
+            android:name=".Tambah_menu.input_menu_minuman"
             android:exported="false" />
         <activity
-            android:name=".List_Menu_Minuman"
+            android:name=".Tambah_menu.List_Menu_Minuman"
             android:exported="false" />
         <activity
-            android:name=".List_Menu_Makanan"
+            android:name=".Tambah_menu.List_Menu_Makanan"
             android:exported="false" />
         <activity
-            android:name=".input_menu_makanan"
+            android:name=".Tambah_menu.input_menu_makanan"
             android:exported="false" />
         <activity
             android:name=".list_menu"
             android:exported="false" />
         <activity
-            android:name=".Struk"
+            android:name=".Dashboard.Struk"
             android:exported="false" />
         <activity
-            android:name=".Checkout"
+            android:name=".Dashboard.Checkout"
             android:exported="false" />
         <activity
-            android:name=".EditProfile"
+            android:name=".Profile.EditProfile"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name=".Dashboard.Dashboard"
             android:exported="false" />
         <activity
-            android:name=".Profile"
+            android:name=".Profile.Profile"
             android:exported="false" />
         <activity
             android:name=".SuccessRegisterAct"

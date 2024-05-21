@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/dashboard"
-    tools:context=".Dashboard">
+    tools:context=".Dashboard.Dashboard">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/bgprimary"
-        tools:context=".Dashboard">
+        tools:context=".Dashboard.Dashboard">
 
 
         <TextView

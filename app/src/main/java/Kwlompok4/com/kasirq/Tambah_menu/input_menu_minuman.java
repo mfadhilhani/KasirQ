@@ -1,4 +1,4 @@
-package Kwlompok4.com.kasirq;
+package Kwlompok4.com.kasirq.Tambah_menu;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,19 +11,17 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-public class input_menu_makanan extends AppCompatActivity {
+import Kwlompok4.com.kasirq.R;
+
+public class input_menu_minuman extends AppCompatActivity {
 
     private ImageView pic_foto, btn_add_foto;
     private ImageButton imageButtonAddVariantq;
@@ -33,7 +31,8 @@ public class input_menu_makanan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_input_menu_makanan);
+        setContentView(R.layout.activity_input_menu_minuman);
+
 
         pic_foto = findViewById(R.id.pic_foto);
         editTextMenuName = findViewById(R.id.editTextMenuName);
@@ -55,11 +54,11 @@ public class input_menu_makanan extends AppCompatActivity {
                         pic_foto.setImageBitmap(selectedImage);
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
-                        Toast.makeText(input_menu_makanan.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(input_menu_minuman.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             } else {
-                Toast.makeText(input_menu_makanan.this, "Tidak Ada Gambar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(input_menu_minuman.this, "Tidak Ada Gambar", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -69,6 +68,7 @@ public class input_menu_makanan extends AppCompatActivity {
         });
 
 
+
         imageButtonAddVariantq.setOnClickListener(view -> {
             if (editTextMenuName.getText().toString().isEmpty() ||
                     editTextMenuPrice.getText().toString().isEmpty() ||
@@ -76,12 +76,12 @@ public class input_menu_makanan extends AppCompatActivity {
                     editTextMenuVariant.getText().toString().isEmpty()) {
 
                 // Jika salah satu isian kosong
-                Toast.makeText(input_menu_makanan.this, "Harap Lengkapi Semua Isian", Toast.LENGTH_SHORT).show();
+                Toast.makeText(input_menu_minuman.this, "Harap Lengkapi Semua Isian", Toast.LENGTH_SHORT).show();
             } else if (pic_foto.getDrawable() == null) {
                 // Jika gambar belum dipilih
-                Toast.makeText(input_menu_makanan.this, "Harap Pilih Gambar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(input_menu_minuman.this, "Harap Pilih Gambar", Toast.LENGTH_SHORT).show();
             } else {
-                AlertDialog.Builder builder = new AlertDialog.Builder(input_menu_makanan.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(input_menu_minuman.this);
                 builder.setMessage("Nama Menu : " + editTextMenuName.getText().toString() + "\n" +
                         "Modal : " + editTextMenuPrice.getText().toString() + "\n" +
                         "Harga Jual : " + editTextMenuCost.getText().toString() + "\n" +
@@ -98,15 +98,13 @@ public class input_menu_makanan extends AppCompatActivity {
                     editTextMenuName.requestFocus();
 
                     // Switch to List_Menu_Makanan activity
-                    Intent intent = new Intent(input_menu_makanan.this, List_Menu_Makanan.class);
+                    Intent intent = new Intent(input_menu_minuman.this, List_Menu_Makanan.class);
                     startActivity(intent);
                 });
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
             }
         });
-
-
 
 
 

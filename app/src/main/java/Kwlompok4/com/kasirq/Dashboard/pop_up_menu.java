@@ -1,4 +1,4 @@
-package Kwlompok4.com.kasirq;
+package Kwlompok4.com.kasirq.Dashboard;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import Kwlompok4.com.kasirq.R;
 
 /**
  * A simple {@link Fragment} subclass.

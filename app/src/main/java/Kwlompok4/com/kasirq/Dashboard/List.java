@@ -1,4 +1,4 @@
-package Kwlompok4.com.kasirq;
+package Kwlompok4.com.kasirq.Dashboard;
 
 public class List {
 

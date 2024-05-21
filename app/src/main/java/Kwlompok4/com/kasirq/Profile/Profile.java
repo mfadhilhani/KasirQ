@@ -1,30 +1,25 @@
-package Kwlompok4.com.kasirq;
+package Kwlompok4.com.kasirq.Profile;
 
-import android.app.ActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
-import android.widget.ImageView;
-import android.view.View.OnClickListener;
+import Kwlompok4.com.kasirq.Login;
+import Kwlompok4.com.kasirq.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Dashboard#newInstance} factory method to
+ * Use the {@link Profile#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Dashboard extends Fragment {
-
-
+public class Profile extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +30,7 @@ public class Dashboard extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Dashboard() {
+    public Profile() {
         // Required empty public constructor
     }
 
@@ -45,17 +40,16 @@ public class Dashboard extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Dashboard_home.
+     * @return A new instance of fragment Profile.
      */
     // TODO: Rename and change types and number of parameters
-    public static Dashboard newInstance(String param1, String param2) {
-        Dashboard fragment = new Dashboard();
+    public static Profile newInstance(String param1, String param2) {
+        Profile fragment = new Profile();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
-
     }
 
     @Override
@@ -64,32 +58,23 @@ public class Dashboard extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-
         }
-
     }
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
 
-
-        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
-
-
-        Button btn_pesan = view.findViewById(R.id.btn_pesan);
-        btn_pesan.setOnClickListener(new View.OnClickListener() {
+        LinearLayout btn_edit = view.findViewById(R.id.btn_edit);
+        btn_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Code for OpenPageFromFragment
-                Intent x = new Intent(getActivity(), Checkout.class);
-                startActivity(x);
-                MyDialogFragment dialogFragment = new MyDialogFragment();
-                dialogFragment.show(getChildFragmentManager(), "MyDialogFragment");
+                Intent btn_edit = new Intent(getActivity(), EditProfile.class);
+                startActivity(btn_edit);
                 //End Code for OpenPageFromFragment
 
                 //Code for OpenFragmentFromFragment
@@ -100,24 +85,27 @@ public class Dashboard extends Fragment {
                 //End Code for OpenFragmentFromFragment
             }
         });
-        // Add click listener for ImageView
-        ImageView ayamImageView = view.findViewById(R.id.ayam);
-        ayamImageView.setOnClickListener(new View.OnClickListener() {
+
+
+        Button btn_logout = view.findViewById(R.id.btn_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDialogFragment dialogFragment = new MyDialogFragment();
-                dialogFragment.show(getChildFragmentManager(), "MyDialogFragment");
+                //Code for OpenPageFromFragment
+                Intent btn_logout = new Intent(getActivity(), Login.class);
+                startActivity(btn_logout);
+                //End Code for OpenPageFromFragment
+
+                //Code for OpenFragmentFromFragment
+//                getActivity().getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.frame_layout, new FprofileFragment())
+//                        .addToBackStack(null)
+//                        .commit();
+                //End Code for OpenFragmentFromFragment
             }
         });
-
         return view;
 
 
-
     }
-
-
-
-
 }
-

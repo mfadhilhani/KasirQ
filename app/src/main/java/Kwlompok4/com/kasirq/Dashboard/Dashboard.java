@@ -1,4 +1,4 @@
-package Kwlompok4.com.kasirq;
+package Kwlompok4.com.kasirq.Dashboard;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,15 +9,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
+import Kwlompok4.com.kasirq.MyDialogFragment;
+import Kwlompok4.com.kasirq.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link TambahMenu#newInstance} factory method to
+ * Use the {@link Dashboard#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TambahMenu extends Fragment {
+public class Dashboard extends Fragment {
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +33,7 @@ public class TambahMenu extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public TambahMenu() {
+    public Dashboard() {
         // Required empty public constructor
     }
 
@@ -38,16 +43,17 @@ public class TambahMenu extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment TambahMenu.
+     * @return A new instance of fragment Dashboard_home.
      */
     // TODO: Rename and change types and number of parameters
-    public static TambahMenu newInstance(String param1, String param2) {
-        TambahMenu fragment = new TambahMenu();
+    public static Dashboard newInstance(String param1, String param2) {
+        Dashboard fragment = new Dashboard();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+
     }
 
     @Override
@@ -56,41 +62,32 @@ public class TambahMenu extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
+
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_tambah_menu, container, false);
 
 
-        ImageView btn_edit = view.findViewById(R.id.imageViewFood);
-        btn_edit.setOnClickListener(new View.OnClickListener() {
+
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+
+        Button btn_pesan = view.findViewById(R.id.btn_pesan);
+        btn_pesan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Code for OpenPageFromFragment
-                Intent imageViewFood = new Intent(getActivity(), List_Menu_Makanan.class);
-                startActivity(imageViewFood);
-               //End Code for OpenPageFromFragment
-
-                //Code for OpenFragmentFromFragment
-//                getActivity().getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.frame_layout, new FprofileFragment())
-//                        .addToBackStack(null)
-//                        .commit();
-                //End Code for OpenFragmentFromFragment
-            }
-        });
-
-        ImageView btn_edit1 = view.findViewById(R.id.imageViewDrink);
-        btn_edit1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Code for OpenPageFromFragment
-                Intent imageViewFood = new Intent(getActivity(), List_Menu_Minuman.class);
-                startActivity(imageViewFood);
+                Intent x = new Intent(getActivity(), Checkout.class);
+                startActivity(x);
+                MyDialogFragment dialogFragment = new MyDialogFragment();
+                dialogFragment.show(getChildFragmentManager(), "MyDialogFragment");
                 //End Code for OpenPageFromFragment
 
                 //Code for OpenFragmentFromFragment
@@ -101,7 +98,24 @@ public class TambahMenu extends Fragment {
                 //End Code for OpenFragmentFromFragment
             }
         });
+        // Add click listener for ImageView
+        ImageView ayamImageView = view.findViewById(R.id.ayam);
+        ayamImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyDialogFragment dialogFragment = new MyDialogFragment();
+                dialogFragment.show(getChildFragmentManager(), "MyDialogFragment");
+            }
+        });
+
         return view;
 
+
+
     }
+
+
+
+
 }
+

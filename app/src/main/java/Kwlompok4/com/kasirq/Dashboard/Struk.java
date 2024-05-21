@@ -1,7 +1,6 @@
-package Kwlompok4.com.kasirq;
+package Kwlompok4.com.kasirq.Dashboard;
 
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +11,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 import androidx.appcompat.app.AppCompatActivity;
+
+import Kwlompok4.com.kasirq.MainActivity;
+import Kwlompok4.com.kasirq.R;
 
 public class Struk extends AppCompatActivity {
 

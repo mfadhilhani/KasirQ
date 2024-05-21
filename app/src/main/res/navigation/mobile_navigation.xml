@@ -6,19 +6,19 @@
 
     <fragment
     android:id="@+id/dashboard"
-    android:name="Kwlompok4.com.kasirq.Dashboard"
+    android:name="Kwlompok4.com.kasirq.Dashboard.Dashboard"
     android:label="Dashboard"
     tools:layout="@layout/fragment_dashboard"/>
 
     <fragment
         android:id="@+id/profile"
-        android:name="Kwlompok4.com.kasirq.Profile"
+        android:name="Kwlompok4.com.kasirq.Profile.Profile"
         android:label="Profile"
         tools:layout="@layout/fragment_profile"/>
 
     <fragment
         android:id="@+id/tambahMenu"
-        android:name="Kwlompok4.com.kasirq.TambahMenu"
+        android:name="Kwlompok4.com.kasirq.Tambah_menu.TambahMenu"
         android:label="tambahMenu"
         tools:layout="@layout/fragment_tambah_menu"/>
 

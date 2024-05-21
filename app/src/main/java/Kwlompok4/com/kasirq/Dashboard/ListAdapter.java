@@ -1,4 +1,4 @@
-package Kwlompok4.com.kasirq;
+package Kwlompok4.com.kasirq.Dashboard;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+
+import Kwlompok4.com.kasirq.R;
 
 public class ListAdapter extends ArrayAdapter<List> {
 

@@ -45,6 +45,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui:2.6.0")
     implementation("androidx.activity:activity:1.8.0")
     implementation("com.google.firebase:firebase-database:21.0.0")
+    implementation("com.google.firebase:firebase-storage:21.0.0")
     implementation("com.google.firebase:firebase-auth:23.0.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -52,5 +53,7 @@ dependencies {
     implementation("androidx.core:core:1.12.0")
     implementation ("io.github.florent37:shapeofview:1.4.7")
     implementation ("com.squareup.picasso:picasso:2.5.2")
+    implementation ("com.github.bumptech.glide:glide:4.11.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.11.0")
 
 }
