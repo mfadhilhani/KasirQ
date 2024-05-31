@@ -55,5 +55,8 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.5.2")
     implementation ("com.github.bumptech.glide:glide:4.11.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.11.0")
+    implementation ("org.apache.poi:poi:5.2.3")
+    implementation ("org.apache.poi:poi-ooxml:5.2.3")
+
 
 }

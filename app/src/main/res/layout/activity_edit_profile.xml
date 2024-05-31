@@ -80,6 +80,7 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/usernameprofile"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
@@ -111,6 +112,7 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/passwordprofile"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
@@ -130,7 +132,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_continue"
+        android:id="@+id/btn_simpan"
         android:layout_width="250dp"
         android:layout_height="55dp"
         android:layout_marginTop="24dp"
@@ -157,7 +159,7 @@
         android:background="@drawable/bg_layout_white"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@+id/btn_continue"
+        app:layout_constraintEnd_toStartOf="@+id/btn_simpan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
@@ -173,7 +175,7 @@
         android:id="@+id/btn_hapus"
         android:layout_width="250dp"
         android:layout_height="55dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="64dp"
         android:background="#FF0000"
         android:fontFamily="@font/mmedium"
         android:text="Hapus AKUN"
@@ -182,7 +184,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_continue" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_simpan" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

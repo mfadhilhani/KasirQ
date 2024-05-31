@@ -8,8 +8,6 @@
     tools:context=".Tambah_menu.input_menu_makanan">
 
 
-
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"

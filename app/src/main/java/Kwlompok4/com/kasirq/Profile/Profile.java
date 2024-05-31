@@ -1,16 +1,23 @@
 package Kwlompok4.com.kasirq.Profile;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-
+import android.widget.TextView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import Kwlompok4.com.kasirq.Profile.EditProfile;
 import Kwlompok4.com.kasirq.Login;
 import Kwlompok4.com.kasirq.R;
 
@@ -29,6 +36,11 @@ public class Profile extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private DatabaseReference database;
+    private TextView usernameprofile, passwordprofile;
+
+    LinearLayout btn_edit;
 
     public Profile() {
         // Required empty public constructor
@@ -61,11 +73,57 @@ public class Profile extends Fragment {
         }
     }
 
+    @SuppressLint("WrongViewCast")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        usernameprofile = view.findViewById(R.id.usernameprofile);
+        passwordprofile = view.findViewById(R.id.passwordprofile);
+
+        // Mengambil username dari SharedPreferences
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("login", getActivity().MODE_PRIVATE);
+        String usernameText = sharedPreferences.getString("username", "");
+
+        // Referensi ke database
+        database = FirebaseDatabase.getInstance().getReference("Users").child(usernameText);
+
+        // Mengambil data dari database
+        database.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    String username = snapshot.child("username").getValue(String.class);
+                    String password = snapshot.child("password").getValue(String.class);
+
+                    usernameprofile.setText(username);
+                    passwordprofile.setText(password);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Handle possible errors.
+            }
+        });
+
+        btn_edit = view.findViewById(R.id.btn_edit);
+        btn_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Mengambil data dari TextView
+                String currentUsername = usernameprofile.getText().toString();
+                String currentPassword = passwordprofile.getText().toString();
+
+                // Mengirim data ke EditProfile melalui Intent
+                Intent btn_edit = new Intent(getActivity(), EditProfile.class);
+                btn_edit.putExtra("username", currentUsername);
+                btn_edit.putExtra("password", currentPassword);
+                startActivity(btn_edit);
+            }
+        });
 
 
         LinearLayout btn_edit = view.findViewById(R.id.btn_edit);
@@ -86,7 +144,6 @@ public class Profile extends Fragment {
             }
         });
 
-
         Button btn_logout = view.findViewById(R.id.btn_logout);
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,8 +161,7 @@ public class Profile extends Fragment {
                 //End Code for OpenFragmentFromFragment
             }
         });
+
         return view;
-
-
     }
 }
